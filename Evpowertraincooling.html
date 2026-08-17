@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Powertrain Cooling & Test Bench Integration | Miguel Ferreira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0D0D0D',
+                        accent: '#00D2FF',
+                        borderDark: '#1F1F1F',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-darkBg text-white antialiased selection:bg-accent selection:text-darkBg pb-24">
+    <!-- Ambient glow -->
+    <div class="fixed top-0 left-0 w-[600px] h-[400px] bg-accent/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+    <div class="max-w-4xl mx-auto px-6 pt-16">
+        <a href="index.html" class="inline-flex items-center text-gray-400 hover:text-accent transition-colors mb-12 group text-sm font-medium">
+            <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Back to Home
+        </a>
+        
+        <header class="mb-16">
+            <div class="inline-block px-3 py-1 bg-accent/10 border border-accent/20 text-accent rounded-full text-xs font-bold uppercase tracking-wider mb-5">Formula Student </div>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">EV Powertrain Cooling Development</h1>
+            <p class="text-xl text-gray-400 leading-relaxed max-w-3xl">CAD design and physical assembly of the powertrain cooling system for the TEK 26 Formula Student prototype, including custom hose fittings, adapters, and fan mounting brackets.</p>
+        </header>
+
+        <main class="space-y-16">
+            <div class="h-px w-full bg-gradient-to-r from-borderDark via-borderDark to-transparent"></div>
+
+            <section class="prose prose-invert prose-lg max-w-none">
+                <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
+                    Design & Validation Strategy
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+                    <div class="col-span-12 md:col-span-4">
+                        <h3 class="text-lg font-semibold text-white m-0">SolidWorks CAD </h3>
+                    </div>
+                    <div class="col-span-12 md:col-span-8">
+                        <p class="text-gray-400 text-base leading-relaxed m-0">
+                          Modeled custom hose fittings, adapters, and fan brackets in SolidWorks. Designed connector geometries with smooth transitions—avoiding 90-degree sharp bends—to ensure negligible pressure drop at the pump's 10 L/min flow rate
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+                    <div class="col-span-12 md:col-span-4">
+                        <h3 class="text-lg font-semibold text-white m-0">FDM Rapid Prototyping</h3>
+                    </div>
+                    <div class="col-span-12 md:col-span-8">
+                        <p class="text-gray-400 text-base leading-relaxed m-0">
+                            Utilized FDM 3D printing for rapid physical validation and fitment checks before committing to complex manufacturing. Printed test models in PETG for quick geometric iteration and functional cooling connectors in PA12, significantly reducing prototyping time and costly machining errors.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+                    <div class="col-span-12 md:col-span-4">
+                        <h3 class="text-lg font-semibold text-white m-0">Personal Milestones & Technical Goals</h3>
+                    </div>
+                    <div class="col-span-12 md:col-span-8">
+                        <p class="text-gray-400 text-base leading-relaxed m-0">
+                           My personal milestones for December 2026 are to develop a validated MATLAB simulation model for the TEK 26 battery and run a topology optimization simulation for the cooling jacket.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-8 text-white">Project Gallery</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card 1 -->
+                    <div class="rounded-lg border border-[#262626] bg-[#111] overflow-hidden flex flex-col group">
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="assets/print conector solid.png" alt="SolidWorks CAD Connector" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="p-5 flex-grow border-t border-[#262626]">
+                            <p class="text-sm text-[#a1a1aa] leading-relaxed m-0">
+                                <strong class="text-[#38bdf8] font-semibold">SolidWorks CAD:</strong> Custom fluid connector modeled with smooth transitions to ensure uniform flow distribution and minimize pressure drops.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="rounded-lg border border-[#262626] bg-[#111] overflow-hidden flex flex-col group">
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="assets/Sem título.png" alt="Ansys Workbench Initial Exploration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="p-5 flex-grow border-t border-[#262626]">
+                            <p class="text-sm text-[#a1a1aa] leading-relaxed m-0">
+                                <strong class="text-[#38bdf8] font-semibold">Ansys Workbench Exploration:</strong> Initial workflow setup and test geometry to learn the environment, explore interface fundamentals, and get familiar with structural/thermal simulation tools.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="rounded-lg border border-[#262626] bg-[#111] overflow-hidden flex flex-col group">
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="assets/print bambu.png" alt="Bambu Studio Print Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="p-5 flex-grow border-t border-[#262626]">
+                            <p class="text-sm text-[#a1a1aa] leading-relaxed m-0">
+                                <strong class="text-[#38bdf8] font-semibold">Additive Manufacturing Prep:</strong> Bambu Studio slicing setup optimizing print orientation, wall thickness, and support placement for PETG components.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="rounded-lg border border-[#262626] bg-[#111] overflow-hidden flex flex-col group">
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="assets/imagem de um acessorio impresso em petgg e montado no circuito para testar.png" alt="PETG Prototype Fitment Test" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="p-5 flex-grow border-t border-[#262626]">
+                            <p class="text-sm text-[#a1a1aa] leading-relaxed m-0">
+                                <strong class="text-[#38bdf8] font-semibold">Physical Fitment & Validation:</strong> FDM-printed PETG prototype test-fitted within the vehicle cooling loop to validate geometry and routing clearances.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

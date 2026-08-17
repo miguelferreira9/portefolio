@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Ferreira | Automotive Engineering</title>
+    <meta name="description" content="Portfolio of Miguel Ferreira, Automotive Engineering student specializing in test equipment integration and EV thermal management.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0D0D0D',
+                        accent: '#00D2FF',
+                        borderDark: '#1F1F1F',
+                        cardBg: '#121212'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(18, 18, 18, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        /* Subtle entrance animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .delay-100 { animation-delay: 100ms; opacity: 0; }
+        .delay-200 { animation-delay: 200ms; opacity: 0; }
+        .delay-300 { animation-delay: 300ms; opacity: 0; }
+    </style>
+</head>
+<body class="bg-darkBg text-white antialiased selection:bg-accent selection:text-darkBg pb-20">
+    <!-- Ambient glow behind hero -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+    <div class="max-w-5xl mx-auto px-6 pt-24">
+        <!-- Hero Section -->
+        <header class="animate-fade-in">
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight">Miguel Ferreira</h1>
+            <h2 class="text-xl md:text-2xl text-accent mt-3 font-medium">Automotive Engineering Student • Formula Student LArt</h2>
+            <p class="text-gray-400 mt-6 max-w-2xl leading-relaxed text-lg">
+                
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-12">
+                <div class="glass-card border border-borderDark rounded-xl p-4 hover:border-accent hover:shadow-[0_0_20px_rgba(0,210,255,0.1)] transition-all duration-300 group">
+                    <div class="text-accent mb-3 group-hover:scale-110 origin-left transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-100">Custom Fittings & Adapters</h3>
+                    <p class="text-sm text-gray-500 mt-2">SolidWorks CAD & rapid prototyping</p>
+                </div>
+                <div class="glass-card border border-borderDark rounded-xl p-4 hover:border-accent hover:shadow-[0_0_20px_rgba(0,210,255,0.1)] transition-all duration-300 group">
+                    <div class="text-accent mb-3 group-hover:scale-110 origin-left transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-100">Formula Student</h3>
+                    
+                    <p class="text-sm text-gray-500 mt-2">Powertrain team • LArt</p>
+                </div>
+                <div class="glass-card border border-borderDark rounded-xl p-4 hover:border-accent hover:shadow-[0_0_20px_rgba(0,210,255,0.1)] transition-all duration-300 group">
+                    <div class="text-accent mb-3 group-hover:scale-110 origin-left transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-100">Embedded Systems & Microcontrollers</h3>
+                    <p class="text-sm text-gray-500 mt-2">Embedded C, ADC, PWM & EUSART</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Technical Experience Section -->
+        <section class="mt-32 animate-fade-in delay-100">
+            <h2 class="text-3xl font-bold mb-8 flex items-center">
+                Technical Experience
+                <div class="ml-6 h-px bg-gradient-to-r from-borderDark to-transparent flex-grow"></div>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <a href="Evpowertraincooling.html" class="group block relative overflow-hidden rounded-2xl border border-[#262626] hover:border-accent/80 hover:shadow-[0_0_30px_rgba(0,210,255,0.1)] transition-all duration-500 transform hover:-translate-y-2 min-h-[360px] flex flex-col justify-end">
+                    <img src="assets/IMG_6077.jpeg" alt="EV Powertrain Cooling" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 -z-10">
+                    <div class="absolute inset-0 bg-neutral-950/60 z-0"></div>
+                    <div class="p-8 relative z-10 w-full">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-accent transition-colors leading-tight">EV Powertrain Cooling</h3>
+                        <p class="text-gray-300 text-sm mt-3 line-clamp-2 leading-relaxed">SolidWorks manifold design, FDM rapid prototyping, and configuring thermal test workflows.</p>
+                        <div class="mt-6 flex items-center text-sm font-medium text-accent">
+                            View Project 
+                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="instrumentation.html" class="group block relative overflow-hidden rounded-2xl border border-[#262626] hover:border-accent/80 hover:shadow-[0_0_30px_rgba(0,210,255,0.1)] transition-all duration-500 transform hover:-translate-y-2 min-h-[360px] flex flex-col justify-end">
+                    <img src="assets/PRINT PROTEUS.png" alt="Systems Fundamentals" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 -z-10">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-neutral-950/40 z-0"></div>
+                    <div class="p-8 relative z-10 w-full">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-accent transition-colors leading-tight">Systems Fundamentals</h3>
+                        <p class="text-gray-300 text-sm mt-3 line-clamp-2 leading-relaxed">C programming, digital systems (state machines & binary logic), PIC18 microcontrollers, and electronic instrumentation concepts.</p>
+                        <div class="mt-6 flex items-center text-sm font-medium text-accent">
+                            View Project 
+                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Core Capabilities Section -->
+        <section class="mt-32 animate-fade-in delay-200">
+            <h2 class="text-3xl font-bold mb-8 flex items-center">
+                Core Capabilities
+                <div class="ml-6 h-px bg-gradient-to-r from-borderDark to-transparent flex-grow"></div>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                <!-- Software -->
+                <div class="glass-card border border-borderDark p-6 rounded-2xl hover:border-borderDark/80 transition-colors h-full flex flex-col">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center text-gray-100">
+                        <svg class="w-5 h-5 mr-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        Software
+                    </h3>
+                    <div class="flex flex-col gap-4 flex-grow">
+                        <span class="inline-flex items-center justify-between px-4 py-2.5 bg-borderDark/30 border border-borderDark/50 rounded-lg text-sm text-gray-300">
+                            SolidWorks
+                        </span>
+                        <span class="inline-flex items-center justify-between px-4 py-2.5 border-borderDark/50 border  bg-borderDark/30 rounded-lg text-sm  bg-accent/5 text-gray-200">
+                            CATIA V5
+                            <span class="text-[9px] uppercase tracking-wider text-accent font-bold px-2 py-1 bg-accent/10 rounded ml-2 whitespace-nowrap">SECONDARY EDUCATION</span>
+                        </span>
+                        <span class="inline-flex items-center justify-between px-4 py-2.5 border border-borderDark/50 border  bg-borderDark/30 rounded-lg text-sm bg-accent/5 text-gray-200">
+                            MATLAB / ANSYS
+                            <span class="text-[9px] uppercase tracking-wider text-accent font-bold px-2 py-1 bg-accent/10 rounded ml-2 whitespace-nowrap">In Progress</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Manufacturing -->
+                <div class="glass-card border border-borderDark p-6 rounded-2xl hover:border-borderDark/80 transition-colors h-full flex flex-col">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center text-gray-100">
+                        <svg class="w-5 h-5 mr-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        Manufacturing & Design
+                    </h3>
+                    <div class="flex flex-col gap-4 flex-grow">
+                        <span class="inline-flex items-center justify-between px-4 py-2.5 bg-borderDark/30 border border-borderDark/50 rounded-lg text-sm text-gray-300">Manual & CNC Turning</span>
+                        <span class="inline-flex items-center justify-between px-4 py-2.5 bg-borderDark/30 border border-borderDark/50 rounded-lg text-sm text-gray-300">Manual & CNC Milling</span>
+                        <span class="inline-flex items-center justify-between px-4 py-2.5 bg-borderDark/30 border border-borderDark/50 rounded-lg text-sm text-gray-300">FDM Rapid Prototyping</span>
+                    </div>
+                </div>
+
+                <!-- Engineering Domain -->
+                <div class="glass-card border border-borderDark p-6 rounded-2xl hover:border-borderDark/80 transition-colors h-full flex flex-col">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center text-gray-100">
+                        <svg class="w-5 h-5 mr-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                       Academic & Technical Focus
+                    </h3>
+                    <div class="flex flex-col gap-4 flex-grow">
+                        <span class="inline-flex items-center justify-between px-4 py-2.5 bg-borderDark/30 border border-borderDark/50 rounded-lg text-sm text-gray-300">PIC18 Microcontrollers</span>
+                        <span class="inline-flex items-center justify-between px-4 py-2.5 bg-borderDark/30 border border-borderDark/50 rounded-lg text-sm text-gray-300">Proteus Simulation</span>
+                        <span class="inline-flex items-center justify-between px-4 py-2.5 bg-borderDark/30 border border-borderDark/50 rounded-lg text-sm text-gray-300">Embedded C (ADC, PWM, EUSART)</span>
+                        <span class="inline-flex items-center justify-between px-4 py-2.5 bg-borderDark/30 border border-borderDark/50 rounded-lg text-sm text-gray-300">Basic Sensor Integration</span>
+                        <span class="inline-flex items-center justify-between px-4 py-2.5 bg-borderDark/30 border border-borderDark/50 rounded-lg text-sm text-gray-300">EV Thermal Management</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="mt-32 mb-10 text-center glass-card border border-borderDark p-12 md:p-16 rounded-3xl relative overflow-hidden animate-fade-in delay-300">
+            <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[80px]"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Let’s Connect?</h2>
+                <p class="text-gray-400 mb-10 max-w-xl mx-auto text-lg">Open to engineering opportunities, technical learning experiences, and hands-on projects.</p>
+                <div class="flex justify-center gap-4 flex-wrap">
+                    <a href="mailto:miguelvendinha@gmail.com" class="px-8 py-3.5 bg-accent text-darkBg font-semibold rounded-full hover:bg-white hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all duration-300 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        Contact Me
+                    </a>
+                    <a href="https://linkedin.com/" target="_blank" class="px-8 py-3.5 bg-transparent text-white border border-borderDark font-semibold rounded-full hover:border-accent hover:text-accent hover:bg-accent/5 transition-all duration-300 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="text-center text-gray-600 text-sm py-8 border-t border-borderDark mt-12 flex flex-col items-center justify-center">
+            <p>&copy;  Miguel Ferreira.</p>
+        </footer>
+    </div>
+</body>
+</html>
