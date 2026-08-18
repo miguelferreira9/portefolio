@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Ferreira | Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0D0D0D',
+                        accent: '#00D2FF',
+                        borderDark: '#1F1F1F',
+                        textMain: '#F3F4F6',
+                        textMuted: '#9CA3AF'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .print-hide { display: none !important; }
+            .print-text-black { color: black !important; }
+            .print-border-gray { border-color: #e5e7eb !important; }
+            .print-bg-white { background: white !important; }
+            h1, h2, h3, h4, p, span, li { color: black !important; }
+            .text-accent { color: #0284c7 !important; } /* darker blue for print readability */
+            a { text-decoration: none; color: black !important; }
+            .border-borderDark { border-color: #e5e7eb !important; }
+            .bg-borderDark\/30 { background-color: #f3f4f6 !important; } /* Light gray backgrounds for skills badges */
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-textMain antialiased p-6 md:p-12 lg:p-20 max-w-5xl mx-auto print-bg-white print-text-black">
+    
+    <div class="print-hide mb-10 flex justify-between items-center">
+        <a href="index.html" class="inline-flex items-center text-textMuted hover:text-accent transition-colors text-sm font-medium">
+            <svg class="w-4 h-4 mr-2 transform hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Back to Portfolio
+        </a>
+        <button onclick="window.print()" class="px-5 py-2.5 border border-borderDark rounded-lg hover:border-accent hover:text-accent transition-colors text-sm flex items-center gap-2 font-medium">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            Print / Save PDF
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="border-b border-borderDark print-border-gray pb-8 mb-8">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">Miguel Ferreira</h1>
+        <h2 class="text-xl text-accent font-medium mb-4">Automotive Engineering Student</h2>
+        <div class="flex flex-wrap gap-5 text-sm text-textMuted">
+            <a href="mailto:miguelvendinha@gmail.com" class="flex items-center gap-1.5 hover:text-accent transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                miguelvendinha@gmail.com
+            </a>
+            <a href="https://linkedin.com/" target="_blank" class="flex items-center gap-1.5 hover:text-accent transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+            </a>
+            <span class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                Portugal
+            </span>
+        </div>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2 space-y-10">
+            <!-- Experience -->
+            <section>
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    Engineering Experience & Projects
+                </h3>
+                
+                <div class="space-y-8">
+                    <!-- Project 1 -->
+                    <div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                            <h4 class="text-lg font-bold">EV Powertrain Cooling & Integration</h4>
+                            <span class="text-accent text-sm font-medium">Formula Student LArt</span>
+                        </div>
+                        <ul class="list-disc list-inside text-textMuted space-y-2 text-sm leading-relaxed">
+                            <li>Designed custom Y-splitter hose fittings and adapters in SolidWorks, optimizing geometry for uniform flow distribution and minimal pressure drop.</li>
+                            <li>Utilized FDM 3D printing for rapid physical validation (PETG) and functional cooling connectors (PA12) to fit physical packaging constraints on the TEK 26 prototype.</li>
+                            <li>Integrated the physical cooling loop with custom manifolds, pump, and fluid lines, conducting real-world fitment and clearance validation.</li>
+                            <li>Initiated Ansys Workbench workflow exploration for upcoming structural and thermal simulation validation on the cooling jacket.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                            <h4 class="text-lg font-bold">Electronic Instrumentation & Microprocessor DAQ</h4>
+                            <span class="text-accent text-sm font-medium">Academic Project</span>
+                        </div>
+                        <ul class="list-disc list-inside text-textMuted space-y-2 text-sm leading-relaxed">
+                            <li>Developed a C-based sensor data acquisition system with a CLI interactive menu for real-time alert statistics and parsed record logs.</li>
+                            <li>Configured PIC18 microcontrollers in Embedded C (MPLAB X), setting up ADC channels, PWM, and EUSART for pressure sensor readings.</li>
+                            <li>Conducted hardware-in-the-loop simulations using Proteus to demonstrate real-time acquisition and signal processing.</li>
+                            <li>Applied core electronic protection principles on physical bench circuits, including flyback diodes and current-limiting resistors.</li>
+                            <li>Validated signals using benchtop oscilloscopes, multimeters, and DC power supplies.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="space-y-10">
+            <!-- Education -->
+            <section>
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2 border-b border-borderDark print-border-gray pb-3">
+                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg>
+                    Education
+                </h3>
+                <div>
+                    <h4 class="font-bold text-sm">Automotive Engineering, BSc</h4>
+                    <p class="text-textMuted text-sm mt-1.5 leading-relaxed">Focus on Thermodynamics, Fluid Mechanics, Electronics & Test Engineering.</p>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section>
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2 border-b border-borderDark print-border-gray pb-3">
+                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    Technical Skills
+                </h3>
+                
+                <div class="space-y-5">
+                    <div>
+                        <h4 class="text-sm font-semibold mb-2.5">CAD & Analysis</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">SolidWorks</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">CATIA V5</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">Ansys Workbench</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-sm font-semibold mb-2.5">Manufacturing & Prototyping</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">FDM 3D Printing (PETG/ABS)</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">Bambu Studio</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">CNC / Manual Machining</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-sm font-semibold mb-2.5">Programming & Simulation</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">Embedded C</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">MATLAB</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">Proteus</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">MPLAB X</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-semibold mb-2.5">Hardware & Instrumentation</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">PIC18 Microcontrollers</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">Oscilloscopes & DAQ</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs">Circuit Troubleshooting</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
