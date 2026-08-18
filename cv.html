@@ -31,6 +31,7 @@
             body {
                 background: white !important;
                 color: black !important;
+                padding: 0 !important;
             }
             .print-hide { display: none !important; }
             .print-text-black { color: black !important; }
@@ -41,6 +42,13 @@
             a { text-decoration: none; color: black !important; }
             .border-borderDark { border-color: #e5e7eb !important; }
             .bg-borderDark\/30 { background-color: #f3f4f6 !important; } /* Light gray backgrounds for skills badges */
+            
+            /* Print adjustments for fit */
+            .mb-10 { margin-bottom: 1.5rem !important; }
+            .space-y-10 > * + * { margin-top: 1.5rem !important; }
+            .pb-8 { padding-bottom: 1rem !important; }
+            .mb-8 { margin-bottom: 1rem !important; }
+            .p-6, .p-12, .p-20 { padding: 1rem !important; }
         }
     </style>
 </head>
@@ -58,7 +66,7 @@
     </div>
 
     <!-- Header -->
-    <header class="border-b border-borderDark print-border-gray pb-6 mb-8">
+    <header class="border-b border-borderDark print-border-gray pb-6 mb-6">
         <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">Miguel Ferreira</h1>
         <h2 class="text-xl text-accent font-medium mb-4">Automotive Engineering Student</h2>
         <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm text-textMuted">
@@ -81,6 +89,13 @@
         </div>
     </header>
 
+    <!-- Professional Summary -->
+    <section class="mb-10">
+        <p class="text-gray-300 leading-relaxed text-sm">
+            Automotive Engineering student with a strong hands-on background in mechanical design, rapid prototyping, and embedded systems integration. Practical experience in SolidWorks CAD modeling, iterative manufacturing (FDM 3D Printing, manual/CNC machining), and C/Embedded C firmware development for sensor acquisition and hardware control. Focused on EV thermal systems and physical prototyping.
+        </p>
+    </section>
+
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <!-- Main Content (Experience & Projects) -->
         <div class="lg:col-span-2 space-y-10">
@@ -88,7 +103,7 @@
             <section>
                 <h3 class="text-2xl font-bold mb-6 flex items-center gap-2 border-b border-borderDark print-border-gray pb-2">
                     <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    Engineering Experience
+                    Work & Team Experience
                 </h3>
                 
                 <div class="space-y-7">
@@ -98,11 +113,10 @@
                             <h4 class="text-lg font-bold text-gray-100">Student Engineer - Powertrain & EV Cooling</h4>
                             <span class="text-accent text-sm font-semibold whitespace-nowrap mt-1 sm:mt-0">Feb 2026 – Present</span>
                         </div>
-                        <div class="text-textMuted font-medium text-sm mb-3">Formula Student (LART)</div>
+                        <div class="text-textMuted font-medium text-sm mb-3">Formula Student (LART) | On-site</div>
                         <ul class="list-disc list-inside text-gray-300 space-y-1.5 text-sm leading-relaxed ml-1">
-                            <li>Designed custom Y-splitter hose fittings and cooling adapters in SolidWorks, optimizing internal geometry for uniform flow distribution and minimal pressure drop.</li>
-                            <li>Validated packaging constraints on TEK 26 prototype using FDM 3D printing (PETG) and functional PA12 cooling connectors.</li>
-                            <li>Assembled and integrated the physical cooling loop (manifolds, pump, lines) on chassis with real-world clearance checks.</li>
+                            <li>Modeled custom cooling components in SolidWorks (adapters, fittings, mounting brackets), optimizing geometry transitions to reduce pressure drop at a target 10 L/min flow rate.</li>
+                            <li>Executed rapid FDM prototyping using PETG for fitment checks and PA12 for functional coolant connectors, eliminating machining iterations and clearance errors.</li>
                         </ul>
                     </div>
 
@@ -112,9 +126,10 @@
                             <h4 class="text-lg font-bold text-gray-100">Engineering Intern - Heavy Equipment Maintenance</h4>
                             <span class="text-accent text-sm font-semibold whitespace-nowrap mt-1 sm:mt-0">Jul 2025 – Aug 2025</span>
                         </div>
-                        <div class="text-textMuted font-medium text-sm mb-3">Ascendum Portugal</div>
+                        <div class="text-textMuted font-medium text-sm mb-3">Ascendum Portugal | Leiria, Portugal</div>
                         <ul class="list-disc list-inside text-gray-300 space-y-1.5 text-sm leading-relaxed ml-1">
-                            <li>Performed mechanical/hydraulic fault diagnostics and transmission system troubleshooting following manufacturer technical manuals.</li>
+                            <li>Diagnosed mechanical and hydraulic faults on heavy machinery and analyzed transmission systems using manufacturer technical documentation.</li>
+                            <li>Managed workshop service operations, logged work orders, inspected replacement parts, and assisted senior technicians.</li>
                         </ul>
                     </div>
 
@@ -124,9 +139,10 @@
                             <h4 class="text-lg font-bold text-gray-100">CAD/CAM Trainee</h4>
                             <span class="text-accent text-sm font-semibold whitespace-nowrap mt-1 sm:mt-0">May 2020 – Jun 2020</span>
                         </div>
-                        <div class="text-textMuted font-medium text-sm mb-3">CadSolid</div>
+                        <div class="text-textMuted font-medium text-sm mb-3">CadSolid | Remote (Leiria)</div>
                         <ul class="list-disc list-inside text-gray-300 space-y-1.5 text-sm leading-relaxed ml-1">
-                            <li>Completed 144 hours of 3D modeling, surface splitting, and mold component design in TopSolid.</li>
+                            <li>Completed 144 hours of specialized TopSolid training focusing on 3D solid modeling, parting surface creation, and mold tooling components.</li>
+                            <li>Applied core CAM fundamentals including 2D-to-5D toolpath generation and CNC turning setups.</li>
                         </ul>
                     </div>
 
@@ -136,27 +152,29 @@
                             <h4 class="text-lg font-bold text-gray-100">Metalworking & Industrial Maintenance Trainee</h4>
                             <span class="text-accent text-sm font-semibold whitespace-nowrap mt-1 sm:mt-0">Jun 2019 – Jul 2019</span>
                         </div>
-                        <div class="text-textMuted font-medium text-sm mb-3">FILSTONE NATURAL SL</div>
+                        <div class="text-textMuted font-medium text-sm mb-3">FILSTONE NATURAL SL | Fátima, Portugal</div>
                         <ul class="list-disc list-inside text-gray-300 space-y-1.5 text-sm leading-relaxed ml-1">
-                            <li>Executed precision welding, cutting, and metal fabrication tasks in industrial workshop.</li>
+                            <li>Carried out workshop metal fabrication, precision cutting, and welding tasks in an industrial quarry environment.</li>
+                            <li>Assisted with mechanical maintenance and preventive inspections across industrial machinery.</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- Key Academic Projects -->
+            <!-- Technical Projects -->
             <section>
                 <h3 class="text-2xl font-bold mb-6 flex items-center gap-2 border-b border-borderDark print-border-gray pb-2 mt-10">
                     <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                    Key Academic & Lab Projects
+                    Technical Projects
                 </h3>
                 
                 <div class="space-y-6">
                     <div>
-                        <h4 class="text-lg font-bold text-gray-100 mb-3">Electronic Instrumentation & Microprocessor DAQ</h4>
+                        <h4 class="text-lg font-bold text-gray-100 mb-3">Hardware Integration & Embedded Data Acquisition (C / PIC18)</h4>
                         <ul class="list-disc list-inside text-gray-300 space-y-1.5 text-sm leading-relaxed ml-1">
-                            <li>Programmed PIC18 microcontrollers in Embedded C (MPLAB X) for ADC reading, PWM, and EUSART communication.</li>
-                            <li>Built real-time C-based data acquisition CLI tool and validated hardware circuits using benchtop oscilloscopes and Proteus HIL simulation.</li>
+                            <li>Built a modular C sensor-logging CLI application using binary file persistence (fread/fwrite) with strict memory buffer safeguards.</li>
+                            <li>Developed PIC18 microcontroller firmware in Embedded C (MPLAB X), configuring ADC channels, PWM outputs, and EUSART communication, validated via Hardware-in-the-Loop simulation in Proteus.</li>
+                            <li>Assembled physical breadboard protection circuits (flyback diodes, current-limiting resistors) and measured signals using digital oscilloscopes, multimeters, and DC power supplies.</li>
                         </ul>
                     </div>
                 </div>
@@ -171,11 +189,17 @@
                     <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg>
                     Education
                 </h3>
-                <div>
-                    <h4 class="font-bold text-sm text-gray-100">BSc in Automotive Engineering</h4>
-                    <div class="text-accent text-sm font-medium mt-1 mb-1">Sep 2024 – Jul 2027</div>
-                    <div class="text-textMuted text-sm font-medium mb-2">Instituto Politécnico de Leiria</div>
-                    <p class="text-gray-400 text-sm leading-relaxed">Core Coursework: Thermodynamics, Fluid Mechanics, Electronics & Test Engineering.</p>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold text-sm text-gray-100">BSc in Automotive Engineering</h4>
+                        <div class="text-textMuted text-sm font-medium mt-1 mb-1">Politécnico de Leiria</div>
+                        <div class="text-accent text-sm font-medium">Sep 2024 – Jul 2028 (Expected)</div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-gray-100">CNC Machining & Programming Technician (EQF Level 4)</h4>
+                        <div class="text-textMuted text-sm font-medium mt-1 mb-1">Ourém Professional School</div>
+                        <div class="text-accent text-sm font-medium">Sep 2017 – Jul 2020</div>
+                    </div>
                 </div>
             </section>
 
@@ -188,34 +212,40 @@
                 
                 <div class="space-y-5">
                     <div>
-                        <h4 class="text-sm font-bold text-gray-200 mb-2.5">CAD & Simulation</h4>
+                        <h4 class="text-sm font-bold text-gray-200 mb-2.5">Mechanical & Prototyping</h4>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">SolidWorks</span>
-                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">CATIA V5</span>
-                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">Ansys Workbench (exploratory)</span>
-                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">MATLAB</span>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h4 class="text-sm font-bold text-gray-200 mb-2.5">Prototyping & Machining</h4>
-                        <div class="flex flex-wrap gap-2">
                             <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">FDM 3D Printing (PETG/ABS/PA12)</span>
-                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">Bambu Studio</span>
-                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">CNC / Manual Machining</span>
-                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">Welding & Metalworking</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">Manual & CNC Turning/Milling</span>
                         </div>
                     </div>
                     
                     <div>
-                        <h4 class="text-sm font-bold text-gray-200 mb-2.5">Embedded & Hardware</h4>
+                        <h4 class="text-sm font-bold text-gray-200 mb-2.5">Engineering Software</h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">Embedded C</span>
-                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">PIC18 Microcontrollers</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">CATIA V5</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">MATLAB</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">ANSYS Workbench</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-sm font-bold text-gray-200 mb-2.5">Embedded & Electronics</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">C</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">Embedded C (PIC18, ADC, PWM, EUSART)</span>
                             <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">MPLAB X</span>
                             <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">Proteus</span>
-                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">DAQ</span>
-                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">Oscilloscopes & Bench Instruments</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">Benchtop Instrumentation (Oscilloscopes, DAQ, DMM)</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-sm font-bold text-gray-200 mb-2.5">Automotive Systems</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">EV Thermal Management</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">Fluid Circuits</span>
+                            <span class="px-2.5 py-1 bg-borderDark/30 border border-borderDark rounded text-xs font-medium text-gray-300">Sensor Interfacing</span>
                         </div>
                     </div>
                 </div>
